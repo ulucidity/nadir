@@ -13,23 +13,41 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: time.cpp
+///   File: timezone.hpp
 ///
 /// Author: $author$
 ///   Date: 1/3/2024
 //////////////////////////////////////////////////////////////////////////
-#include "xos/base/time.hpp"
+#ifndef XOS_BASE_TIMEZONE_HPP
+#define XOS_BASE_TIMEZONE_HPP
 
-#ifndef XOS_BASE_TIME_INSTANCE
-/// #define XOS_BASE_TIME_INSTANCE 
-#else /// ndef XOS_BASE_TIME_INSTANCE 
-#endif /// ndef XOS_BASE_TIME_INSTANCE 
+#include "xos/base/base.hpp"
 
 namespace xos {
 
-/// class timet
-#ifdef XOS_BASE_TIME_INSTANCE
-static time the_time;
-#endif /// def XOS_BASE_TIME_INSTANCE 
+/// class timezonet
+template <class TExtends = extend, class TImplements = implement>
+class exported timezonet: virtual public TImplements, public TExtends {
+public:
+    typedef TImplements implements;
+    typedef TExtends extends;
+    typedef timezonet derives;
+
+    /// constructor / destructor
+    timezonet(const timezonet &copy): extends(copy) {
+    }
+    timezonet() {
+    }
+    virtual ~timezonet() {
+    }
+private:
+public:
+
+protected:
+}; /// class timezonet
+typedef timezonet<> timezone;
+typedef timezone* timezone_t;
 
 } /// namespace xos 
+
+#endif /// ndef XOS_BASE_TIMEZONE_HPP

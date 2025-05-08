@@ -13,23 +13,23 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: time.cpp
+///   File: timezone.cpp
 ///
 /// Author: $author$
 ///   Date: 1/3/2024
 //////////////////////////////////////////////////////////////////////////
-#include "xos/base/time.hpp"
+#include "xos/base/timezone.hpp"
 
-#ifndef XOS_BASE_TIME_INSTANCE
-/// #define XOS_BASE_TIME_INSTANCE 
-#else /// ndef XOS_BASE_TIME_INSTANCE 
-#endif /// ndef XOS_BASE_TIME_INSTANCE 
+#ifndef XOS_BASE_TIMEZONE_INSTANCE
+/// #define XOS_BASE_TIMEZONE_INSTANCE 
+#else /// ndef XOS_BASE_TIMEZONE_INSTANCE 
+#endif /// ndef XOS_BASE_TIMEZONE_INSTANCE 
 
 namespace xos {
 
-/// class timet
-#ifdef XOS_BASE_TIME_INSTANCE
-static time the_time;
-#endif /// def XOS_BASE_TIME_INSTANCE 
+/// class timezonet
+#ifdef XOS_BASE_TIMEZONE_INSTANCE
+static timezone the_timezone;
+#endif /// def XOS_BASE_TIMEZONE_INSTANCE 
 
 } /// namespace xos 

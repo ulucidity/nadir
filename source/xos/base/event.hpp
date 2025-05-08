@@ -13,23 +13,46 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: time.cpp
+///   File: event.hpp
 ///
 /// Author: $author$
-///   Date: 1/3/2024
+///   Date: 1/8/2024
 //////////////////////////////////////////////////////////////////////////
-#include "xos/base/time.hpp"
+#ifndef XOS_BASE_EVENT_HPP
+#define XOS_BASE_EVENT_HPP
 
-#ifndef XOS_BASE_TIME_INSTANCE
-/// #define XOS_BASE_TIME_INSTANCE 
-#else /// ndef XOS_BASE_TIME_INSTANCE 
-#endif /// ndef XOS_BASE_TIME_INSTANCE 
+#include "xos/base/logged.hpp"
 
 namespace xos {
 
-/// class timet
-#ifdef XOS_BASE_TIME_INSTANCE
-static time the_time;
-#endif /// def XOS_BASE_TIME_INSTANCE 
+/// enum event_handled_status
+typedef int event_handled_status;
+enum {
+    event_unhandled = 0,
+    event_handled_success,
+    event_handled_failed
+};/// enum event_handled_status
+
+/// class eventt
+template <class TExtends = xos::extended::logged, class TImplements = typename TExtends::implements>
+class exported eventt: virtual public TImplements, public TExtends {
+public:
+    typedef TImplements implements;
+    typedef TExtends extends;
+    typedef eventt derives;
+
+    /// constructor / destructor
+    eventt(const eventt &copy): extends(copy) {
+    }
+    eventt() {
+    }
+    virtual ~eventt() {
+    }
+
+protected:
+}; /// class eventt
+typedef eventt<> event;
 
 } /// namespace xos 
+
+#endif /// ndef XOS_BASE_EVENT_HPP
