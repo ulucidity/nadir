@@ -1,5 +1,5 @@
-//////////////////////////////////////////////////////////////////////////
-/// Copyright (c) 1988-2024 $organization$
+///////////////////////////////////////////////////////////////////////
+/// Copyright (c) 1988-2019 $organization$
 ///
 /// This software is provided by the author and contributors ``as is'' 
 /// and any express or implied warranties, including, but not limited to, 
@@ -16,8 +16,8 @@
 ///   File: string.hpp
 ///
 /// Author: $author$
-///   Date: 1/5/2024
-//////////////////////////////////////////////////////////////////////////
+///   Date: 12/5/2019, 8/7/2022
+///////////////////////////////////////////////////////////////////////
 #ifndef XOS_BASE_STRING_HPP
 #define XOS_BASE_STRING_HPP
 
@@ -781,10 +781,8 @@ public:
 }; /// class stringt
 typedef stringt<> string;
 
-typedef stringt<char> char_string;
-typedef stringt<tchar_t> tchar_string, tstring;
-typedef stringt<wchar_t> wchar_string, wstring;
-typedef stringt<byte_t> byte_string, bstring;
+typedef stringt<tchar_t> tstring;
+typedef stringt<wchar_t> wstring;
 
 #if defined(STD_BYTE_STRING_ALLOWED)
 typedef stringt<byte_t> bstring;
@@ -900,12 +898,12 @@ public:
 }; /// class string_baset
 typedef string_baset<> string_base;
 
-typedef string_baset<char> char_string_base;
-typedef string_baset<tchar_t> tchar_string_base, tstring_base;
-typedef string_baset<wchar_t> wchar_string_base, wstring_base;
-typedef string_baset<byte_t> byte_string_base, bstring_base;
+typedef string_baset<tchar_t> tstring_base;
+typedef string_baset<wchar_t> wstring_base;
+typedef string_baset<byte_t> bstring_base;
+
 } /// namespace base
 
-} /// namespace xos 
+} /// namespace xos
 
 #endif /// ndef XOS_BASE_STRING_HPP

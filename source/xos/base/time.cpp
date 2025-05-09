@@ -1,5 +1,5 @@
-//////////////////////////////////////////////////////////////////////////
-/// Copyright (c) 1988-2024 $organization$
+///////////////////////////////////////////////////////////////////////
+/// Copyright (c) 1988-2019 $organization$
 ///
 /// This software is provided by the author and contributors ``as is'' 
 /// and any express or implied warranties, including, but not limited to, 
@@ -16,20 +16,10 @@
 ///   File: time.cpp
 ///
 /// Author: $author$
-///   Date: 1/3/2024
-//////////////////////////////////////////////////////////////////////////
-#include "xos/base/time.hpp"
-
-#ifndef XOS_BASE_TIME_INSTANCE
-/// #define XOS_BASE_TIME_INSTANCE 
-#else /// ndef XOS_BASE_TIME_INSTANCE 
-#endif /// ndef XOS_BASE_TIME_INSTANCE 
+///   Date: 12/25/2019
+///////////////////////////////////////////////////////////////////////
+#include "xos/time.hpp"
 
 namespace xos {
 
-/// class timet
-#ifdef XOS_BASE_TIME_INSTANCE
-static time the_time;
-#endif /// def XOS_BASE_TIME_INSTANCE 
-
-} /// namespace xos 
+} /// namespace xos
