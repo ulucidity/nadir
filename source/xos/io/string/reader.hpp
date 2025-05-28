@@ -16,7 +16,7 @@
 ///   File: reader.hpp
 ///
 /// Author: $author$
-///   Date: 4/10/2020, 8/24/2021
+///   Date: 4/10/2020, 8/24/2021, 5/10/2025
 ///////////////////////////////////////////////////////////////////////
 #ifndef XOS_IO_STRING_READER_HPP
 #define XOS_IO_STRING_READER_HPP
@@ -127,6 +127,14 @@ protected:
     size_t tell_;
 }; /// class readert
 typedef readert<> reader;
+
+typedef readert<base::cstring> char_reader;
+typedef readert<base::tstring> tchar_reader;
+typedef readert<base::wstring> wchar_reader;
+
+#if defined(STD_BYTE_STRING_ALLOWED)
+typedef stringt<base::bstring> byte_string;
+#endif /// defined(STD_BYTE_STRING_ALLOWED)
 
 } /// namespace string
 } /// namespace io

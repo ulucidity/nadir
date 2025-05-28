@@ -635,11 +635,21 @@ protected:
         return (string_t&)lf_;
     }
     //////////////////////////////////////////////////////////////////////////
+    /// ...lf
+    virtual string_t& set_null_lf(const string_t& to) {
+        string_t& lf = this->null_lf();
+        lf = to;
+        return lf;
+    }
+    virtual string_t& null_lf() const {
+        return (string_t&)null_lf_;
+    }
+    //////////////////////////////////////////////////////////////////////////
 
     //////////////////////////////////////////////////////////////////////////
 protected:
     bool verbose_output_, output_lf_;
-    string_t crlf2_, crlf_, cr_, lf_;
+    string_t crlf2_, crlf_, cr_, lf_, null_lf_;
 }; /// class maint 
 typedef maint<> main;
 

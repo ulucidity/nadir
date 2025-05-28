@@ -56,6 +56,7 @@ public:
     typedef xos::io::char_writert<char_sequence_t> char_writer_t;
     typedef xos::base::stringt<sequence_char_t> reader_string_t;
     typedef xos::io::string::readert<reader_string_t, char_reader_t> string_reader_t;
+    typedef string_reader_t  char_string_reader_t;
     //typedef xos::io::string::readert<char_reader_t> string_reader_t;
     //typedef typename string_reader_t::string_t reader_string_t;
     typedef typename reader_string_t::char_t reader_char_t;

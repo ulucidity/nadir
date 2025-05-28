@@ -16,7 +16,7 @@
 ///   File: string.hpp
 ///
 /// Author: $author$
-///   Date: 12/5/2019, 8/7/2022
+///   Date: 12/5/2019, 8/7/2022, 5/10/2025
 ///////////////////////////////////////////////////////////////////////
 #ifndef XOS_BASE_STRING_HPP
 #define XOS_BASE_STRING_HPP
@@ -781,6 +781,7 @@ public:
 }; /// class stringt
 typedef stringt<> string;
 
+typedef stringt<char> cstring;
 typedef stringt<tchar_t> tstring;
 typedef stringt<wchar_t> wstring;
 
